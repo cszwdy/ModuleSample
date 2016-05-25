@@ -16,7 +16,7 @@ class FunctionWrapper<T> {
 private let mainBoundleName = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? String ?? ""
 
 class Moduler {
-    
+
     class func target(targetName: String, performAction actionName: String, paras: AnyObject?, inBundle name: String = mainBoundleName) -> Unmanaged<AnyObject>? {
         
         let bundle = name

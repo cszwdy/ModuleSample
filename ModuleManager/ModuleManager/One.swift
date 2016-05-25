@@ -10,7 +10,7 @@ import UIKit
 
 protocol OneActionsProtocol {
     static func action_DetailVC(paras: [String: AnyObject]) -> UIViewController?
-    static func action_PublicDetailVC(paras: [String: AnyObject])
+    static func action_PresentPublicDetailVC(paras: [String: AnyObject])
 }
 
 class One: NSObject, OneActionsProtocol {
@@ -32,7 +32,7 @@ class One: NSObject, OneActionsProtocol {
     }
     
     // show public detail vc
-    static func action_PublicDetailVC(paras: [String: AnyObject]) {
+    static func action_PresentPublicDetailVC(paras: [String: AnyObject]) {
         guard let title = paras["title"] as? String else {
             print("\(#file) no match para dic keys \(paras)")
             return
@@ -43,6 +43,10 @@ class One: NSObject, OneActionsProtocol {
         
         if let handler = paras["handler"] as? FunctionWrapper<() -> ()> {
             d.handler = handler.method
+        }
+        
+        if let image = paras["image"] as? UIImage {
+            d.image = image
         }
         
         d.view.backgroundColor = UIColor.redColor()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C04023C1CF5550500F70EA4 /* Moduler+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C04023B1CF5550500F70EA4 /* Moduler+URL.swift */; };
+		2C04023E1CF5557E00F70EA4 /* Moduler+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C04023D1CF5557E00F70EA4 /* Moduler+Image.swift */; };
 		2C49CE041CF3F36C001BFBFF /* Moduler+One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49CE031CF3F36C001BFBFF /* Moduler+One.swift */; };
 		2C49CE061CF3F42D001BFBFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49CE051CF3F42D001BFBFF /* DetailViewController.swift */; };
 		2C49CE091CF3F466001BFBFF /* One.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49CE081CF3F466001BFBFF /* One.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C04023B1CF5550500F70EA4 /* Moduler+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moduler+URL.swift"; sourceTree = "<group>"; };
+		2C04023D1CF5557E00F70EA4 /* Moduler+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moduler+Image.swift"; sourceTree = "<group>"; };
 		2C49CE031CF3F36C001BFBFF /* Moduler+One.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moduler+One.swift"; sourceTree = "<group>"; };
 		2C49CE051CF3F42D001BFBFF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2C49CE081CF3F466001BFBFF /* One.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = One.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				2C9307AF1CF2CDA800D0E5F6 /* Moduler.swift */,
+				2C04023B1CF5550500F70EA4 /* Moduler+URL.swift */,
+				2C04023D1CF5557E00F70EA4 /* Moduler+Image.swift */,
 				2C49CE031CF3F36C001BFBFF /* Moduler+One.swift */,
 				2C49CE071CF3F43B001BFBFF /* One */,
 				2C9307811CF2CD9400D0E5F6 /* AppDelegate.swift */,
@@ -278,7 +284,9 @@
 			files = (
 				2C49CE091CF3F466001BFBFF /* One.swift in Sources */,
 				2C9307B01CF2CDA800D0E5F6 /* Moduler.swift in Sources */,
+				2C04023C1CF5550500F70EA4 /* Moduler+URL.swift in Sources */,
 				2C49CE041CF3F36C001BFBFF /* Moduler+One.swift in Sources */,
+				2C04023E1CF5557E00F70EA4 /* Moduler+Image.swift in Sources */,
 				2C49CE061CF3F42D001BFBFF /* DetailViewController.swift in Sources */,
 				2C9307841CF2CD9400D0E5F6 /* ViewController.swift in Sources */,
 				2C9307821CF2CD9400D0E5F6 /* AppDelegate.swift in Sources */,

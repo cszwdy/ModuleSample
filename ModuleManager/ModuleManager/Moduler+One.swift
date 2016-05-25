@@ -13,19 +13,20 @@ private let targetName = "One"
 
 enum OneActions: String {
     case GET = "action_DetailVC:"
-    case Public = "action_PublicDetailVC:"
+    case Public = "action_PresentPublicDetailVC:"
 }
 
 protocol OneProtocol {
     
-    static func module_Detail(title: String) -> UIViewController?
-    static func module_Detail(title: String, handler:() -> ()) -> UIViewController?
-    static func module_PublicDetail(title: String, handler: () -> ())
+    static func module_detail(title: String) -> UIViewController?
+    static func module_detail(title: String, handler:() -> ()) -> UIViewController?
+    static func module_presentPublicDetail(title: String, handler: () -> ())
+    static func module_presentPublicDetailWithImage(title: String, image: UIImage, handler:() -> ())
 }
 
 extension Moduler: OneProtocol {
     
-    static func module_Detail(title: String) -> UIViewController? {
+    static func module_detail(title: String) -> UIViewController? {
         
         let parameters = [
             "title": title,]
@@ -38,7 +39,7 @@ extension Moduler: OneProtocol {
         return vc
     }
     
-    static func module_Detail(title: String, handler: () -> ()) -> UIViewController? {
+    static func module_detail(title: String, handler: () -> ()) -> UIViewController? {
         
         let parameters: [String: AnyObject] = [
             "title": title,
@@ -53,7 +54,7 @@ extension Moduler: OneProtocol {
         return vc
     }
     
-    static func module_PublicDetail(title: String, handler: () -> ()) {
+    static func module_presentPublicDetail(title: String, handler: () -> ()) {
         
         let parameters: [String: AnyObject] = [
             "title": title,
@@ -63,6 +64,20 @@ extension Moduler: OneProtocol {
         .target(targetName,
                 performAction: OneActions.Public.rawValue,
                 paras: parameters
+        )
+    }
+    
+    static func module_presentPublicDetailWithImage(title: String = "Emiaostein", image: UIImage, handler:() -> ()) {
+        
+        let parameters: [String: AnyObject] = [
+            "title": title,
+            "image": image,
+            "handler": FunctionWrapper(f: handler),]
+        
+        Moduler
+            .target(targetName,
+                    performAction: OneActions.Public.rawValue,
+                    paras: parameters
         )
     }
 }

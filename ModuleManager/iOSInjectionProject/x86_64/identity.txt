@@ -1,0 +1,2 @@
+/Users/Emiaostein/Library/Developer/Xcode/DerivedData/ModuleManager-gimuzclupghbvkarmpguwmuedjze/Build/Products/Debug-iphonesimulator/ModuleManager.app
+

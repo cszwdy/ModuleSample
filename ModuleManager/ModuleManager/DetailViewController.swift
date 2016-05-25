@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var handler: (() -> ())?
+    var image: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,13 @@ class DetailViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.tap(_:)))
         view.addGestureRecognizer(tap)
         
-        print(title)
+        if let image = image {
+            let imgView = UIImageView(frame: CGRect(origin: CGPoint.zero, size: image.size))
+            imgView.image = image
+            view.addSubview(imgView)
+            imgView.center = view.center
+        }
+        
     }
     
     func tap(sender: UITapGestureRecognizer) {
